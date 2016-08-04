@@ -1,0 +1,21 @@
+{
+    "name": "subbe/semantics3",
+    "description": "The Most Comprehensive Suite of Product and Pricing APIs",
+    "keywords": ["laravel", "semantics3", "api", "products"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Subbe",
+            "email": "mohamed.suhaib@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Subbe\\Semantics3\\": "src/"
+        }
+    }
+}
