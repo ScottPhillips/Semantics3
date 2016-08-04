@@ -16,7 +16,7 @@
     "autoload": {
         "psr-4": {
             "Subbe\\Semantics3\\": "src/",
-            "Subbe\\Semantics\\lib\\": "src/lib/"
+            "Subbe\\Semantics3\\lib\\": "src/lib/"
         },
         "files": [
             "src/lib/Semantics3.php"

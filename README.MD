@@ -11,7 +11,7 @@ Semantics3 is a laravel package built using the [lib\semantics3] php library giv
 ##### 1 -
 Open terminal and from the root of your project,
 ```sh
-composer require subbe/semantics3`
+composer require subbe/semantics3
 ```
 ##### 2 -
 Open the file `config\app.php`
@@ -19,10 +19,6 @@ Open the file `config\app.php`
 Add the following line to the providers array
 
 `Subbe\Semantics3\Semantics3ServiceProvider::class,`
-
-and this to the aliases array
-
-`'Semantics3' => Subbe\Semantics3\Facades\Semantics3Facade::class,`
 
 
 ##### 3 -
@@ -38,12 +34,18 @@ Once you are registered and logged in, go to **Application** and you will find t
 Update the projects **.env** file as required and it should look something like this.
 
 ```sh
-SEMANTICS3_SECRET_KEY=SEM****************
-SEMANTICS3_PUBLIC_KEY=ZHFAJHS************
+SEMANTICS3_SECRET_KEY=ZHFAJHS************
+SEMANTICS3_PUBLIC_KEY=SEM****************
 ```
 replace the keys with the ones provided by Semantics3.
 
 ## Usage
+
+Add this,
+
+```php
+use Subbe\Semantics3\Semantics3;
+```
 
 #### `Semantics3::search($item);`
 
