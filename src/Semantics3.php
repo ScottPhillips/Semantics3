@@ -4,11 +4,12 @@ namespace Subbe\Semantics3;
 
 // require(dirname(__FILE__) . '/lib/library/OAuthStore.php');
 // include_once dirname(__FILE__)."/lib/oauth-php/library/OAuthRequester.php";
-include_once dirname(__FILE__)."/lib/oauth-php/library/OAuthStore.php";
-require_once dirname(__FILE__)."/lib/oauth-php/library/OAuthRequest.php";
-require_once dirname(__FILE__)."/lib/oauth-php/library/OAuthRequester.php";
-require_once dirname(__FILE__)."/lib/oauth-php/library/OAuthRequestSigner.php";
-require_once dirname(__FILE__)."/lib/oauth-php/library/OAuthRequestVerifier.php";
+
+// require_once dirname(__FILE__)."/lib/oauth-php/library/OAuthStore.php";
+// require_once dirname(__FILE__)."/lib/oauth-php/library/OAuthRequest.php";
+// require_once dirname(__FILE__)."/lib/oauth-php/library/OAuthRequester.php";
+// require_once dirname(__FILE__)."/lib/oauth-php/library/OAuthRequestSigner.php";
+// require_once dirname(__FILE__)."/lib/oauth-php/library/OAuthRequestVerifier.php";
 
 class Semantics3
 {

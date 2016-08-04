@@ -15,7 +15,11 @@ class Semantics3ServiceProvider extends ServiceProvider
     public function boot()
     {
         include __DIR__ . '/routes.php';
-
+        require_once dirname(__FILE__)."/lib/oauth-php/library/OAuthStore.php";
+        require_once dirname(__FILE__)."/lib/oauth-php/library/OAuthRequest.php";
+        require_once dirname(__FILE__)."/lib/oauth-php/library/OAuthRequester.php";
+        require_once dirname(__FILE__)."/lib/oauth-php/library/OAuthRequestSigner.php";
+        require_once dirname(__FILE__)."/lib/oauth-php/library/OAuthRequestVerifier.php";
         //Publishes package config file to applications config folder
         $this->publishes([__DIR__.'/config/semantics3config.php' => config_path('semantics3config.php')]);
     }

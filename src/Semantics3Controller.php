@@ -5,12 +5,12 @@ namespace Subbe\Semantics3;
 use App\Http\Controllers\Controller;
 
 // require(dirname(__FILE__) . '/lib/library/OAuthStore.php');
-include_once dirname(__FILE__)."/lib/oauth-php/library/OAuthStore.php";
 // include_once dirname(__FILE__)."/lib/oauth-php/library/OAuthRequester.php";
+/*include_once dirname(__FILE__)."/lib/oauth-php/library/OAuthStore.php";
 require_once dirname(__FILE__)."/lib/oauth-php/library/OAuthRequest.php";
 require_once dirname(__FILE__)."/lib/oauth-php/library/OAuthRequester.php";
 require_once dirname(__FILE__)."/lib/oauth-php/library/OAuthRequestSigner.php";
-require_once dirname(__FILE__)."/lib/oauth-php/library/OAuthRequestVerifier.php";
+require_once dirname(__FILE__)."/lib/oauth-php/library/OAuthRequestVerifier.php";*/
 
 class Semantics3Controller extends Controller
 {
@@ -21,26 +21,14 @@ class Semantics3Controller extends Controller
 
         // $requestor = new \Semantics3_Products($key, $secret);
 
-        // # Build the request
         // $requestor->products_field( "search", "SUNQUICK ORANGE FLAVOR SYRUP 840 ML" );
         // $requestor->products_field( "site", "amazon.com" );
 
-        // # Run the request
         // $results = $requestor->get_products();
 
-        // # View the results of the request
         // return $results;
-
-        // return \Semantics3::test();
-
-
-        // $semantics3 = new Semantics3();
-
-        // $search = $semantics3->site_query('iphone', 'amazon.com');
-
-        // $search = Semantics3::site_query('SUNQUICK', 'amazon.com');
-
-        // return $search;
+        $search = Semantics3::search('iphone');
+        return $search;
 
     }
 }
