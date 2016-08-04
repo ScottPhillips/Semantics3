@@ -22,4 +22,4 @@ require(dirname(__FILE__) . '/Semantics3/ParameterError.php');
 require(dirname(__FILE__) . '/Semantics3/ApiConnector.php');
 require(dirname(__FILE__) . '/Semantics3/Products.php');
 
-require(dirname(__FILE__) . '/oauth-php/library/OAuthStore.php');
+// require(dirname(__FILE__) . '/oauth-php/library/OAuthStore.php');

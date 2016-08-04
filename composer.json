@@ -1,6 +1,6 @@
 {
     "name": "subbe/semantics3",
-    "description": "The Most Comprehensive Suite of Product and Pricing APIs",
+    "description": "The Most Comprehensive Suite of Product API",
     "keywords": ["laravel", "semantics3", "api", "products"],
     "license": "MIT",
     "authors": [
@@ -15,7 +15,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Subbe\\Semantics3\\": "src/"
-        }
+            "Subbe\\Semantics3\\": "src/",
+            "Subbe\\Semantics\\lib\\": "src/lib/"
+        },
+        "files": [
+            "src/lib/Semantics3.php"
+        ]
     }
 }

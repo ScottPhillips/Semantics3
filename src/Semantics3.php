@@ -20,8 +20,8 @@ class Semantics3
             return ['code'=>400, 'message'=>'Search request missing a product.'];
         }
 
-        $key = env('SEMANTICS3_SECRET_KEY');
-        $secret = env('SEMANTICS3_PUBLIC_KEY');
+        $key = env('SEMANTICS3_PUBLIC_KEY');
+        $secret = env('SEMANTICS3_SECRET_KEY');
 
         $requestor = new \Semantics3_Products($key, $secret);
 
@@ -41,8 +41,8 @@ class Semantics3
             return ['code'=>400, 'message'=>'Search request missing a product.'];
         }
 
-        $key = env('SEMANTICS3_SECRET_KEY');
-        $secret = env('SEMANTICS3_PUBLIC_KEY');
+        $key = env('SEMANTICS3_PUBLIC_KEY');
+        $secret = env('SEMANTICS3_SECRET_KEY');
 
         $requestor = new \Semantics3_Products($key, $secret);
 
@@ -62,8 +62,8 @@ class Semantics3
             return ['code'=>400, 'message'=>'Requires an item and a website to search from.'];
         }
 
-        $key = env('SEMANTICS3_SECRET_KEY');
-        $secret = env('SEMANTICS3_PUBLIC_KEY');
+        $key = env('SEMANTICS3_PUBLIC_KEY');
+        $secret = env('SEMANTICS3_SECRET_KEY');
 
         $requestor = new \Semantics3_Products($key, $secret);
 
