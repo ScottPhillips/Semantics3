@@ -88,10 +88,12 @@ $sem = new Semantics3();
 $search = $sem->search('iphone');
 $upc = $sem->upc('0885909950942');
 $site = $sem->site_query('iphone', 'amazon.com');
+$site = $sem->categories('hard drives');
 ```
 
+---
 
-### THANK YOU
+## THANK YOU
 
    [Semantics3 API]: https://www.semantics3.com
    [lib\semantics3]: https://github.com/Semantics3/semantics3-php
