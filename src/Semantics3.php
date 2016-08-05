@@ -26,10 +26,35 @@ class Semantics3
         $requestor = new \Semantics3_Products($key, $secret);
 
         # Build the request
-        $requestor->products_field( "search", $item );
+        $requestor->products_field("search", $item);
 
         # Run the request
         $results = $requestor->get_products();
+
+        $requestor->clear_query();
+
+        # View the results of the request
+        return $results;
+    }
+
+    public static function brand($brand) {
+
+        if (!$brand) {
+            return ['code'=>400, 'message'=>'Search request missing a product.'];
+        }
+
+        $key = env('SEMANTICS3_PUBLIC_KEY');
+        $secret = env('SEMANTICS3_SECRET_KEY');
+
+        $requestor = new \Semantics3_Products($key, $secret);
+
+        # Build the request
+        $requestor->products_field("brand", $brand);
+
+        # Run the request
+        $results = $requestor->get_products();
+
+        $requestor->clear_query();
 
         # View the results of the request
         return $results;
@@ -47,10 +72,12 @@ class Semantics3
         $requestor = new \Semantics3_Products($key, $secret);
 
         # Build the request
-        $requestor->products_field("upc", $item );
+        $requestor->products_field("upc", $item);
 
         # Run the request
         $results = $requestor->get_products();
+
+        $requestor->clear_query();
 
         # View the results of the request
         return $results;
@@ -68,13 +95,36 @@ class Semantics3
         $requestor = new \Semantics3_Products($key, $secret);
 
         # Build the request
-        $requestor->products_field("search", $item );
-        $requestor->products_field("site", $site );
+        $requestor->products_field("search", $item);
+        $requestor->products_field("site", $site);
 
         # Run the request
         $results = $requestor->get_products();
 
+        $requestor->clear_query();
+
         # View the results of the request
         return $results;
+    }
+
+    public static function categories($cat) {
+
+        if (!$cat) {
+            return ['code'=>400, 'message'=>'Search request missing a category.'];
+        }
+
+        $key = env('SEMANTICS3_PUBLIC_KEY');
+        $secret = env('SEMANTICS3_SECRET_KEY');
+
+        $requestor = new \Semantics3_Products($key, $secret);
+
+        $requestor->categories_field("name", $cat);
+
+        $results = $requestor->get_categories();
+
+        $requestor->clear_query();
+
+        return $results;
+
     }
 }

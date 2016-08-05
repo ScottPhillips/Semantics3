@@ -56,6 +56,15 @@ This returns product information based on the search term 'iphone'.
 
 ---
 
+#### `Semantics3::brand($item);`
+
+```php
+$item = Semantic3::brand('apple');
+```
+This returns products information based on the brand name 'apple'
+
+---
+
 #### `Semantics3::upc($item);`
 ```php
 $item = Semantic3::upc('0885909950942');
